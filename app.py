@@ -9,8 +9,8 @@ from flask import jsonify
 app = Flask(__name__)
 api = Api(app)
 
-con = sql.connect(host = "127.0.0.1", user = "root", passwd = "", db = "properties")
-
+#con = sql.connect(host = "127.0.0.1", user = "root", passwd = "", db = "properties")
+con = sql.connect(host = MYSQL_DATABASE_HOST, user = MYSQL_DATABASE_USER, passwd = MYSQL_DATABASE_PASSWORD, db = "properties")
 # MySQL configurations
 #app.config['MYSQL_DATABASE_USER'] = 'root'
 #app.config['MYSQL_DATABASE_PASSWORD'] = ''
